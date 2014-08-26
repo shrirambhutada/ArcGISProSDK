@@ -7,6 +7,9 @@ project and how to loop through project items.
 
 *Uses ArcGISPro SDK
 *Uses ArcGIS.Desktop.Mapping.MapContainer
-*Uses ArcGIS.Desktop.Mapping.MapContainer
-*Uses ArcGIS.Desktop.Mapping.MapContainer
-*Uses ArcGIS.Desktop.Mapping.MapContainer
+*Uses ArcGIS.Desktop.GeoProcessing.GeoprocessingContainer
+*Uses ArcGIS.Desktop.Catalog.GDBContainer
+*Uses ArcGIS.Desktop.Catalog.FolderConnectionContainer
+*Uses ArcGIS.Desktop.Core.DisplayUnitEnvironmentItemContainer
+*Uses ArcGIS.Desktop.Mapping.StyleContainer
+
