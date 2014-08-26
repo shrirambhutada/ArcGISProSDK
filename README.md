@@ -13,3 +13,4 @@ project and how to loop through project items.
 *Uses ArcGIS.Desktop.Core.DisplayUnitEnvironmentItemContainer
 *Uses ArcGIS.Desktop.Mapping.StyleContainer
 
+![ArcGIS Pro](https://raw.githubusercontent.com/shrirambhutada/ArcGISProSDK/master/ProAppModule1/ArcGISProContainers.png)
