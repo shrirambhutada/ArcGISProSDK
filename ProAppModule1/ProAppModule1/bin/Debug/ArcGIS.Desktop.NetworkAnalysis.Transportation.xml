@@ -1,0 +1,923 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.NetworkAnalysis.Transportation</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes.CategoryMapping">
+            <summary>
+              Looks up a localized string similar to Mapping.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes.SetCostAttribute_Format_ValueAndLayerArg">
+            <summary>
+              Looks up a localized string similar to Set Cost: &apos;{0}&apos; (Layer: {1}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.OperationsRes.SetCostAttribute_MultipleLayers_Format_ValueArg">
+            <summary>
+              Looks up a localized string similar to Set Cost: &apos;{0}&apos; (Multiple Layers).
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_LoadLocations_Header">
+            <summary>
+              Looks up a localized string similar to Add Locations.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_MakeNewNALayer_Header">
+            <summary>
+              Looks up a localized string similar to Make New Network Analysis Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_MakeNewNALayer_Header_Format_SolveTypeArg">
+            <summary>
+              Looks up a localized string similar to Make New {0} Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_MakeNewNALayer_NewName_Format_SolveTypeArg">
+            <summary>
+              Looks up a localized string similar to New &lt;{0}&gt;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_SolveType_Header">
+            <summary>
+              Looks up a localized string similar to Solve.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.AnalysisTaskType_Undefined">
+            <summary>
+              Looks up a localized string similar to Network Analysis.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.CopyAll">
+            <summary>
+              Looks up a localized string similar to Copy All.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.Messages">
+            <summary>
+              Looks up a localized string similar to Messages.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.NoRecentResults_Format_TaskTypeArg">
+            <summary>
+              Looks up a localized string similar to No recent &apos;{0}&apos; operation..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.LocalResources.NATaskItemsViewRes.TimeStamp_Today_Format_DateTimeArg">
+            <summary>
+              Looks up a localized string similar to Today {0}.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.NetworkAnalysis.Transportation.ViewModels.NATaskGroupContextMakeNewNALayerTaskTypeViewModel.ExecuteMakeNewNALayerAsync(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="solveType">Must be of type NASolveType or IEnumerable&lt;NASolveType&gt;</param>
+            <returns></returns>
+        </member>
+        <member name="T:ArcGIS.Desktop.NetworkAnalysis.Transportation.Views.NATaskItemsView">
+            <summary>
+            Interaction logic for NATaskItemsView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.NetworkAnalysis.Transportation.Views.NATaskItemsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.NetworkAnalysis.Transportation.Views.Ribbon.UnitsLabelControl">
+            <summary>
+            Interaction logic for UnitsLabelControl.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.NetworkAnalysis.Transportation.Views.Ribbon.UnitsLabelControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Abort">
+            <summary>
+              Looks up a localized string similar to Cancelled.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Abort_CancelledTask_Format_TaskTypeAndLayerNameArgs">
+            <summary>
+              Looks up a localized string similar to Cancelled {0} task on network analysis layer: {1}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Abort_MakeNewNALayer">
+            <summary>
+              Looks up a localized string similar to Cancelled Make New NA Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CancelingMessage">
+            <summary>
+              Looks up a localized string similar to Canceling....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CancelingStatus">
+            <summary>
+              Looks up a localized string similar to Canceling.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CutoffsBoundaryDissolve">
+            <summary>
+              Looks up a localized string similar to Dissolve.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CutoffsBoundaryOverlap">
+            <summary>
+              Looks up a localized string similar to Overlap.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CutoffsBoundarySplit">
+            <summary>
+              Looks up a localized string similar to Split.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CutoffsTopologyTypeDisk">
+            <summary>
+              Looks up a localized string similar to Disk.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.CutoffsTopologyTypeRing">
+            <summary>
+              Looks up a localized string similar to Ring.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToConstantDate">
+            <summary>
+              Looks up a localized string similar to Constant Date.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToConstantDateTime">
+            <summary>
+              Looks up a localized string similar to Constant Date &amp; Time.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToCurrentDate">
+            <summary>
+              Looks up a localized string similar to Current Date.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToCurrentDateTime">
+            <summary>
+              Looks up a localized string similar to Current Date &amp; Time.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToMapDate">
+            <summary>
+              Looks up a localized string similar to Map Date.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToMapDateTime">
+            <summary>
+              Looks up a localized string similar to Map Date &amp; Time.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToNone">
+            <summary>
+              Looks up a localized string similar to Not Time Aware.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToWeekdayNextOccurrence">
+            <summary>
+              Looks up a localized string similar to Weekday (Next Occurrence).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.DateTimeSynchronizeToWeekdayOfTypicalWeek">
+            <summary>
+              Looks up a localized string similar to Weekday (Typical Week).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_MakeNewNALayer_ReferenceNetworkNoDefaultFound">
+            <summary>
+              Looks up a localized string similar to Network Dataset not found. Add a network layer to the map or add a file geodatabase containing a network dataset to the project..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_MakeNewNALayer_ReferenceNetworkNotAccessible_Format_ReferenceNetworkArg">
+            <summary>
+              Looks up a localized string similar to Error accessing network dataset: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_NALayer_NotCompatibleForTask">
+            <summary>
+              Looks up a localized string similar to Network analysis layer cannot be used for task..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ParameterValue_DefaultNewAnalysisName">
+            <summary>
+              Looks up a localized string similar to Error finding default new analysis layer name parameter value..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ParameterValue_LoadDataSource">
+            <summary>
+              Looks up a localized string similar to Invalid load data source..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ParameterValue_NALayerIdentifier">
+            <summary>
+              Looks up a localized string similar to Invalid network layer identifer parameter value..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ParameterValue_NetworkLocation">
+            <summary>
+              Looks up a localized string similar to Invalid network location parameter value..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ParameterValue_TooManyValues_Format_ActualCountAndMaxCountArgs">
+            <summary>
+              Looks up a localized string similar to Too many input parameter values provided: ({0} &gt; {1})..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Error_ToolPath_None">
+            <summary>
+              Looks up a localized string similar to No tool path for network analysis..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.ErrorHeadingAddNetworkAnalysis">
+            <summary>
+              Looks up a localized string similar to Add Network Analysis.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_ActiveCostAttribute_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the active cost network attribute definition..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_ActiveCostAttribute_Set">
+            <summary>
+              Looks up a localized string similar to Failed to set the active cost network attribute..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_Adorned_Format_BaseAndCallerMemberNameArgs">
+            <summary>
+              Looks up a localized string similar to {0} [{1}].
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_Caption_General">
+            <summary>
+              Looks up a localized string similar to Network Analysis Transportation Error.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_CostAttributeDefinitions_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested cost network attribute definitions..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_CostCutoffs_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested cost cutoffs..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_CostCutoffs_Set">
+            <summary>
+              Looks up a localized string similar to Failed to set the requested cost cutoffs..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_DateTimeAwareProps_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested time aware properties..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_DateTimeAwareProps_Set">
+            <summary>
+              Looks up a localized string similar to Failed to update the date time aware properties..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_DefaultNetworkDataset_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested default network dataset..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_DoEditSolverSettings">
+            <summary>
+              Looks up a localized string similar to Failed to update the solver settings..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_MakeNALayer_GetDefaultLayerName">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested default name to add network analysis layer..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_NALayerIdentifiers_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested network analysis layer identifiers..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_ReDoEditSolverSettings">
+            <summary>
+              Looks up a localized string similar to Failed to redo the solver settings..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_RelativeTravelDirection_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested relative travel direction..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_RelativeTravelDirection_Set">
+            <summary>
+              Looks up a localized string similar to Failed to update the relative travel direction..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_ServiceArea_OutputGeometryProps_Get">
+            <summary>
+              Looks up a localized string similar to Failed to get the requested Service Area output geometry properties..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_ServiceArea_OutputGeometryProps_Set">
+            <summary>
+              Looks up a localized string similar to Failed to update the Service Area output geometry properties..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Exception_UnDoEditSolverSettings">
+            <summary>
+              Looks up a localized string similar to Failed to undo the solver settings..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Failed">
+            <summary>
+              Looks up a localized string similar to Failed.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_OnBeginExecute_MakeNewAnalysisLayer_Format_LayerNameArg">
+            <summary>
+              Looks up a localized string similar to Adding Network Analysis: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_OnBeginExecute_Solve_Format_LayerNameArg">
+            <summary>
+              Looks up a localized string similar to Solving Network Analysis: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_OnEndExecute_MakeNewAnalysisLayer_Format_LayerNameArg">
+            <summary>
+              Looks up a localized string similar to Added Layer: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_OnEndExecute_Solve_Format_LayerNameArg_Other">
+            <summary>
+              Looks up a localized string similar to Solved Layer [{0}]: {1}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValid_Format_LayerNameArg">
+            <summary>
+              Looks up a localized string similar to Network analysis layer: {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValue_DefaultNewAnalysisName_Format_ParameterValueArg">
+            <summary>
+              Looks up a localized string similar to Updated default analysis name parameter value: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValue_Format_NetworkLocationArg">
+            <summary>
+              Looks up a localized string similar to Network Location: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValue_NetworkLocation_DefaultAlreadyOverridden_Format_NetworkArg">
+            <summary>
+              Looks up a localized string similar to Network Location: &apos;{0}&apos; parameter value already specified..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValue_NetworkLocation_UpdatedToDefault_Format_NetworkArg">
+            <summary>
+              Looks up a localized string similar to Network Location: &apos;{0}&apos; parameter value updated to default..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Inform_ParameterValues_Initiailized">
+            <summary>
+              Looks up a localized string similar to Initialized parameter values..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Initializing">
+            <summary>
+              Looks up a localized string similar to Initializing.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.MapDate">
+            <summary>
+              Looks up a localized string similar to Map Date.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.MapTime">
+            <summary>
+              Looks up a localized string similar to Map Time.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.MessageAndErrorCodeFormat">
+            <summary>
+              Looks up a localized string similar to {0} (code: {1}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.NetworkLocation_Description_Format_NameAndWorkspaceArgs">
+            <summary>
+              Looks up a localized string similar to {0} ({1}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.NetworkLocation_Header">
+            <summary>
+              Looks up a localized string similar to Network Location.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.NetworkLocationFormat">
+            <summary>
+              Looks up a localized string similar to Network Location: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.PolygonQualityHigh">
+            <summary>
+              Looks up a localized string similar to High Precision.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.PolygonQualityLow">
+            <summary>
+              Looks up a localized string similar to Generalized.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.PolygonQualityMedium">
+            <summary>
+              Looks up a localized string similar to Standard Precision.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Processing">
+            <summary>
+              Looks up a localized string similar to Processing.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Progress_CancelMessage">
+            <summary>
+              Looks up a localized string similar to Canceling....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Progress_Format_SolveTypeArg">
+            <summary>
+              Looks up a localized string similar to Making new &apos;{0}&apos; type of Network Analysis.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Progress_MakeNewNALayer_Title">
+            <summary>
+              Looks up a localized string similar to Network Analysis: Make New NALayer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Progress_Solve_Title">
+            <summary>
+              Looks up a localized string similar to Network Analysis: Solve.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RelativeTravelDirectionAwayFrom">
+            <summary>
+              Looks up a localized string similar to Away from Facilities.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RelativeTravelDirectionTowards">
+            <summary>
+              Looks up a localized string similar to Towards Facilities.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RulesOfTheRoad">
+            <summary>
+              Looks up a localized string similar to Rules of the Road.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RulesOfTheRoad_Parameters">
+            <summary>
+              Looks up a localized string similar to Parameters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RulesOfTheRoad_Restrictions">
+            <summary>
+              Looks up a localized string similar to Restrictions.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.RulesOfTheRoad_UTurnPolicy">
+            <summary>
+              Looks up a localized string similar to U-Turn Policy.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SearchingNetworkDataLocations">
+            <summary>
+              Looks up a localized string similar to Searching Network Data Locations....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Singleton_DuplicateInstanceError_ClassName_Format">
+            <summary>
+              Looks up a localized string similar to Only one instance of class &apos;{0}&apos; can be created..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveType_Abbreviation_Unknown_Format_SolveTypeArg">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; type solver.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeClosestFacility">
+            <summary>
+              Looks up a localized string similar to Closest Facility.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeClosestFacilityDescription">
+            <summary>
+              Looks up a localized string similar to Find nearby locations..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeLocationAllocation">
+            <summary>
+              Looks up a localized string similar to Location-Allocation.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeLocationAllocationDescription">
+            <summary>
+              Looks up a localized string similar to Choose the best locations..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeOriginDestinationCostMatrix">
+            <summary>
+              Looks up a localized string similar to Origin-Destination Cost Matrix.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeOriginDestinationCostMatrixDescription">
+            <summary>
+              Looks up a localized string similar to Measure drive times between locations..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeRoute">
+            <summary>
+              Looks up a localized string similar to Route.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeRouteDescription">
+            <summary>
+              Looks up a localized string similar to Find the shortest path between stops..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeServiceArea">
+            <summary>
+              Looks up a localized string similar to Service Area.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeServiceAreaDescription">
+            <summary>
+              Looks up a localized string similar to Generate drive-time polygons..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeVehicleRoutingProblem">
+            <summary>
+              Looks up a localized string similar to Vehicle Routing Problem.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.SolveTypeVehicleRoutingProblemDescription">
+            <summary>
+              Looks up a localized string similar to Optimize the delivery schedule for a fleet of vehicles..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Succeeded">
+            <summary>
+              Looks up a localized string similar to Succeeded.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Success">
+            <summary>
+              Looks up a localized string similar to Success.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TaskItem_DefaultLayerName_Format_SolveTypeDescriptionArg">
+            <summary>
+              Looks up a localized string similar to &lt;{0} Layer&gt;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TaskItem_Description_Format_TypeDescriptionAndLayerNameArgs">
+            <summary>
+              Looks up a localized string similar to {0}: {1}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TaskTypeLoadLocations">
+            <summary>
+              Looks up a localized string similar to Load Locations into Analysis Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TaskTypeMakeNewNALayer">
+            <summary>
+              Looks up a localized string similar to Make New Analysis Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TaskTypeSolve">
+            <summary>
+              Looks up a localized string similar to Solve Analysis Layer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TimeOfDayNow">
+            <summary>
+              Looks up a localized string similar to Now.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TipText_CostAttribute_Format_NameAndDomainAndUnitsArgs">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; Cost Attribute ({1} Units: {2}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TipText_Title_Accumulate">
+            <summary>
+              Looks up a localized string similar to Costs to Sum.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TipText_UnitLabel_Format_DomainNameAndUnitDescriptionArgs">
+            <summary>
+              Looks up a localized string similar to {0} Cost Units: {1}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TipText_UnitLabel_UnitDescriptionPart_Format_FullUnitNameAndAbbreviatedUnitNameArgs">
+            <summary>
+              Looks up a localized string similar to {0} ({1}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.TipText_UnitLabel_UnitDescriptionPart_Undefined">
+            <summary>
+              Looks up a localized string similar to ? (multiple unit types or undefined units).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Today">
+            <summary>
+              Looks up a localized string similar to Today.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationCentimeters">
+            <summary>
+              Looks up a localized string similar to cm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationDays">
+            <summary>
+              Looks up a localized string similar to day.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationDecimalDegrees">
+            <summary>
+              Looks up a localized string similar to °.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationDecimeters">
+            <summary>
+              Looks up a localized string similar to dm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationFeet">
+            <summary>
+              Looks up a localized string similar to ft.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationHours">
+            <summary>
+              Looks up a localized string similar to hr.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationInches">
+            <summary>
+              Looks up a localized string similar to in.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationKilometers">
+            <summary>
+              Looks up a localized string similar to km.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationMeters">
+            <summary>
+              Looks up a localized string similar to m.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationMiles">
+            <summary>
+              Looks up a localized string similar to mi.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationMillimeters">
+            <summary>
+              Looks up a localized string similar to mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationMinutes">
+            <summary>
+              Looks up a localized string similar to min.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationNauticalMiles">
+            <summary>
+              Looks up a localized string similar to nmi.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationOther">
+            <summary>
+              Looks up a localized string similar to ?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationSeconds">
+            <summary>
+              Looks up a localized string similar to sec.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitAbbreviationYards">
+            <summary>
+              Looks up a localized string similar to yd.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitDomainDistance">
+            <summary>
+              Looks up a localized string similar to Distance.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitDomainOther">
+            <summary>
+              Looks up a localized string similar to Other.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitDomainTime">
+            <summary>
+              Looks up a localized string similar to Time.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameCentimeters">
+            <summary>
+              Looks up a localized string similar to Centimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameDays">
+            <summary>
+              Looks up a localized string similar to Days.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameDecimalDegrees">
+            <summary>
+              Looks up a localized string similar to Decimal Degrees.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameDecimeters">
+            <summary>
+              Looks up a localized string similar to Decimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameFeet">
+            <summary>
+              Looks up a localized string similar to Feet.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameHours">
+            <summary>
+              Looks up a localized string similar to Hours.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameInches">
+            <summary>
+              Looks up a localized string similar to Inches.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameKilometers">
+            <summary>
+              Looks up a localized string similar to Kilometers.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameMeters">
+            <summary>
+              Looks up a localized string similar to Meters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameMiles">
+            <summary>
+              Looks up a localized string similar to Miles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameMillimeters">
+            <summary>
+              Looks up a localized string similar to Millimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameMinutes">
+            <summary>
+              Looks up a localized string similar to Minutes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameNauticalMiles">
+            <summary>
+              Looks up a localized string similar to Nautical Miles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameOther">
+            <summary>
+              Looks up a localized string similar to Other.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameSeconds">
+            <summary>
+              Looks up a localized string similar to Seconds.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnitNameYards">
+            <summary>
+              Looks up a localized string similar to Yards.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnknownValue">
+            <summary>
+              Looks up a localized string similar to Unknown.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.UnknownValue_Abbreviation">
+            <summary>
+              Looks up a localized string similar to ?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.ValidateResult_Format_SucceededOrFailedArg">
+            <summary>
+              Looks up a localized string similar to Validate: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.NetworkAnalysis.Transportation.Properties.Resources.Warning">
+            <summary>
+              Looks up a localized string similar to Warning.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

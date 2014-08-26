@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="ProAppModule1.dll" defaultNamespace="ProAppModule1" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS%20Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{40782fb0-ce48-47f4-b5ff-4fbf42477211}" version="1.0" desktopVersion="1.0.1141">
+    <Name>ProAppModule1</Name>
+    <Description>ProAppModule1 description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>shri7492</Author>
+    <Company>Acme</Company>
+    <Date>8/6/2014 4:58:38 PM, 2014</Date>
+  </AddInInfo>
+  <modules>
+    <insertModule id="ProAppModule1_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="ProAppModule1_Tab1" caption="New Tab">
+          <group refID="ProAppModule1_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="ProAppModule1_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="ProAppModule1_Button1" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="ProAppModule1_Button1" caption="Button 1" className="Button1" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>

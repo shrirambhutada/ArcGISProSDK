@@ -1,0 +1,1396 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.TaskAssistant</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.GpEmbeddedView">
+            <summary>
+            Interaction logic for GpEmbeddedView.xaml
+            </summary>
+            <summary>
+            GpEmbeddedView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.GpEmbeddedView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlTokenType">
+            <summary>
+            types of lexical tokens for html-to-xaml converter
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer">
+            <summary>
+            lexical analyzer class
+            recognizes tokens as groups of characters separated by arbitrary amounts of whitespace
+            also classifies tokens according to type
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.#ctor(System.String)">
+            <summary>
+            initializes the _inputStringReader member with the string to be read
+            also sets initial values for _nextCharacterCode and _nextTokenType
+            </summary>
+            <param name="inputTextString">
+            text string to be parsed for xml content
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.GetNextContentToken">
+            <summary>
+            retrieves next recognizable token from input string
+            and identifies its type
+            if no valid token is found, the output parameters are set to null
+            if end of stream is reached without matching any token, token type
+            paramter is set to EOF
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.GetNextTagToken">
+            <summary>
+            Unconditionally returns a token which is one of: TagEnd, EmptyTagEnd, Name, Atom or EndOfStream
+            Does not guarantee token reader advancing.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.GetNextEqualSignToken">
+            <summary>
+            Unconditionally returns equal sign token. Even if there is no
+            real equal sign in the stream, it behaves as if it were there.
+            Does not guarantee token reader advancing.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.GetNextAtomToken">
+            <summary>
+            Unconditionally returns an atomic value for an attribute
+            Even if there is no appropriate token it returns Atom value
+            Does not guarantee token reader advancing.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.GetNextCharacter">
+            <summary>
+            Advances a reading position by one character code
+            and reads the next availbale character from a stream.
+            This character becomes available as NextCharacter property.
+            </summary>
+            <remarks>
+            Throws InvalidOperationException if attempted to be called on EndOfStream
+            condition.
+            </remarks>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.SkipWhiteSpace">
+            <summary>
+            skips whitespace in the input string
+            leaves the first non-whitespace character available in the NextCharacter property
+            this may be the end-of-file character, it performs no checking
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.IsGoodForNameStart(System.Char)">
+            <summary>
+            checks if a character can be used to start a name
+            if this check is true then the rest of the name can be read
+            </summary>
+            <param name="character">
+            character value to be checked
+            </param>
+            <returns>
+            true if the character can be the first character in a name
+            false otherwise
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.IsGoodForName(System.Char)">
+            <summary>
+            checks if a character can be used as a non-starting character in a name
+            uses the IsExtender and IsCombiningCharacter predicates to see
+            if a character is an extender or a combining character
+            </summary>
+            <param name="character">
+            character to be checked for validity in a name
+            </param>
+            <returns>
+            true if the character can be a valid part of a name
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.IsCombiningCharacter(System.Char)">
+            <summary>
+            identifies a character as being a combining character, permitted in a name
+            TODO: only a placeholder for now but later to be replaced with comparisons against
+            the list of combining characters in the XML documentation
+            </summary>
+            <param name="character">
+            character to be checked
+            </param>
+            <returns>
+            true if the character is a combining character, false otherwise
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.IsExtender(System.Char)">
+            <summary>
+            identifies a character as being an extender, permitted in a name
+            TODO: only a placeholder for now but later to be replaced with comparisons against
+            the list of extenders in the XML documentation
+            </summary>
+            <param name="character">
+            character to be checked
+            </param>
+            <returns>
+            true if the character is an extender, false otherwise
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.ReadDynamicContent" -->
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.ReadComment" -->
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.ReadUnknownDirective" -->
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlLexicalAnalyzer.SkipProcessingDirective" -->
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlSchema">
+            <summary>
+            HtmlSchema class
+            maintains static information about HTML structure
+            can be used by HtmlParser to check conditions under which an element starts or ends, etc.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.#cctor">
+            <summary>
+            static constructor, initializes the ArrayLists
+            that hold the elements in various sub-components of the schema
+            e.g _htmlEmptyElements, etc.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.IsEmptyElement(System.String)">
+            <summary>
+            returns true when xmlElementName corresponds to empty element
+            </summary>
+            <param name="xmlElementName">
+            string representing name to test
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.IsBlockElement(System.String)">
+            <summary>
+            returns true if xmlElementName represents a block formattinng element.
+            It used in an algorithm of transferring inline elements over block elements
+            in HtmlParser
+            </summary>
+            <param name="xmlElementName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.IsInlineElement(System.String)">
+            <summary>
+            returns true if the xmlElementName represents an inline formatting element
+            </summary>
+            <param name="xmlElementName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.IsKnownOpenableElement(System.String)">
+            <summary>
+            It is a list of known html elements which we
+            want to allow to produce bt HTML parser,
+            but don'tt want to act as inline, block or no-scope.
+            Presence in this list will allow to open
+            elements during html parsing, and adding the
+            to a tree produced by html parser.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.ClosesOnParentElementEnd(System.String)">
+            <summary>
+            returns true when xmlElementName closes when the outer element closes
+            this is true of elements with optional start tags
+            </summary>
+            <param name="xmlElementName">
+            string representing name to test
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.ClosesOnNextElementStart(System.String,System.String)">
+            <summary>
+            returns true if the current element closes when the new element, whose name has just been read, starts
+            </summary>
+            <param name="currentElementName">
+            string representing current element name
+            </param>
+            <param name="elementName"></param>
+            string representing name of the next element that will start
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.IsEntity(System.String)">
+            <summary>
+            returns true if the string passed as argument is an Html entity name
+            </summary>
+            <param name="entityName">
+            string to be tested for Html entity name
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.EntityCharacterValue(System.String)">
+            <summary>
+            returns the character represented by the entity name string which is passed as an argument, if the string is an entity name
+            as specified in _htmlCharacterEntities, returns the character value of 0 otherwise
+            </summary>
+            <param name="entityName">
+            string representing entity name whose character value is desired
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.InitializeEmptyElements">
+            <summary>
+            initializes _htmlEmptyElements with empty elements in HTML 4 spec at
+            http://www.w3.org/TR/REC-html40/index/elements.html
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.InitializeElementsClosingOnParentElementEnd">
+            <summary>
+            initializes _htmlElementsClosingOnParentElementEnd with the list of HTML 4 elements for which closing tags are optional
+            we assume that for any element for which closing tags are optional, the element closes when it's outer element
+            (in which it is nested) does
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlSchema.InitializeHtmlCharacterEntities">
+            <summary>
+            initializes _htmlCharacterEntities hashtable with the character corresponding to entity names
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlParser">
+            <summary>
+            HtmlParser class accepts a string of possibly badly formed Html, parses it and returns a string
+            of well-formed Html that is as close to the original string in content as possible
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlParser.#ctor(System.String)">
+            <summary>
+            Constructor. Initializes the _htmlLexicalAnalayzer element with the given input string
+            </summary>
+            <param name="inputString">
+            string to parsed into well-formed Html
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlParser.ParseHtml(System.String)">
+            <summary>
+            Instantiates an HtmlParser element and calls the parsing function on the given input string
+            </summary>
+            <param name="htmlString">
+            Input string of pssibly badly-formed Html to be parsed into well-formed Html
+            </param>
+            <returns>
+            XmlElement rep
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlParser.ExtractHtmlFromClipboardData(System.String)">
+            <summary>
+            Extracts Html string from clipboard data by parsing header information in htmlDataString
+            </summary>
+            <param name="htmlDataString">
+            String representing Html clipboard data. This includes Html header
+            </param>
+            <returns>
+            String containing only the Html data part of htmlDataString, without header
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlParser.AddHtmlClipboardHeader(System.String)">
+            <summary>
+            Adds Xhtml header information to Html data string so that it can be placed on clipboard
+            </summary>
+            <param name="htmlString">
+            Html string to be placed on clipboard with appropriate header
+            </param>
+            <returns>
+            String wrapping htmlString with appropriate Html header
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlParser.ParseHtmlContent">
+            <summary>
+            Parses the stream of html tokens starting
+            from the name of top-level element.
+            Returns XmlElement representing the top-level
+            html element
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter">
+            <summary>
+            HtmlToXamlConverter is a static class that takes an HTML string
+            and converts it into XAML
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.ConvertHtmlToXaml(System.String,System.Boolean)">
+            <summary>
+            Converts an html string into xaml string.
+            </summary>
+            <param name="htmlString">
+            Input html which may be badly formated xml.
+            </param>
+            <param name="asFlowDocument">
+            true indicates that we need a FlowDocument as a root element;
+            false means that Section or Span elements will be used
+            dependeing on StartFragment/EndFragment comments locations.
+            </param>
+            <returns>
+            Well-formed xml representing XAML equivalent for the input html string.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetAttribute(System.Xml.XmlElement,System.String)">
+            <summary>
+            Returns a value for an attribute by its name (ignoring casing)
+            </summary>
+            <param name="element">
+            XmlElement in which we are trying to find the specified attribute
+            </param>
+            <param name="attributeName">
+            String representing the attribute name to be searched for
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.UnQuote(System.String)">
+            <summary>
+            Returns string extracted from quotation marks
+            </summary>
+            <param name="value">
+            String representing value enclosed in quotation marks
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddBlock(System.Xml.XmlElement,System.Xml.XmlNode,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+             <summary>
+             Analyzes the given htmlElement expecting it to be converted
+             into some of xaml Block elements and adds the converted block
+             to the children collection of xamlParentElement.
+            
+             Analyzes the given XmlElement htmlElement, recognizes it as some HTML element
+             and adds it as a child to a xamlParentElement.
+             In some cases several following siblings of the given htmlElement
+             will be consumed too (e.g. LIs encountered without wrapping UL/OL,
+             which must be collected together and wrapped into one implicit List element).
+             </summary>
+             <param name="xamlParentElement">
+             Parent xaml element, to which new converted element will be added
+             </param>
+             <param name="htmlElement">
+             Source html element subject to convert to xaml.
+             </param>
+             <param name="inheritedProperties">
+             Properties inherited from an outer context.
+             </param>
+             <param name="stylesheet"></param>
+             <param name="sourceContext"></param>
+             <returns>
+             Last processed html node. Normally it should be the same htmlElement
+             as was passed as a paramater, but in some irregular cases
+             it could one of its following siblings.
+             The caller must use this node to get to next sibling from it.
+             </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddSection(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})" -->
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddParagraph(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})" -->
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddImplicitParagraph(System.Xml.XmlElement,System.Xml.XmlNode,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})" -->
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddList(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Converts Html ul or ol element into Xaml list element. During conversion if the ul/ol element has any children
+            that are not li elements, they are ignored and not added to the list element
+            </summary>
+            <param name="xamlParentElement">
+            XmlElement representing Xaml parent to which the converted element should be added
+            </param>
+            <param name="htmlListElement">
+            XmlElement representing Html ul/ol element to be converted
+            </param>
+            <param name="inheritedProperties">
+            properties inherited from parent context
+            </param>
+            <param name="stylesheet"></param>
+            <param name="sourceContext"></param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddOrphanListItems(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            If li items are found without a parent ul/ol element in Html string, creates xamlListElement as their parent and adds
+            them to it. If the previously added node to the same xamlParentElement was a List, adds the elements to that list.
+            Otherwise, we create a new xamlListElement and add them to it. Elements are added as long as li elements appear sequentially.
+            The first non-li or text node stops the addition.
+            </summary>
+            <param name="xamlParentElement">
+            Parent element for the list
+            </param>
+            <param name="htmlLIElement">
+            Start Html li element without parent list
+            </param>
+            <param name="inheritedProperties">
+            Properties inherited from parent context
+            </param>
+            <returns>
+            XmlNode representing the first non-li node in the input after one or more li's have been processed.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddListItem(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Converts htmlLIElement into Xaml ListItem element, and appends it to the parent xamlListElement
+            </summary>
+            <param name="xamlListElement">
+            XmlElement representing Xaml List element to which the converted td/th should be added
+            </param>
+            <param name="htmlLIElement">
+            XmlElement representing Html li element to be converted
+            </param>
+            <param name="inheritedProperties">
+            Properties inherited from parent context
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddTable(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Converts htmlTableElement to a Xaml Table element. Adds tbody elements if they are missing so
+            that a resulting Xaml Table element is properly formed.
+            </summary>
+            <param name="xamlParentElement">
+            Parent xaml element to which a converted table must be added.
+            </param>
+            <param name="htmlTableElement">
+            XmlElement reprsenting the Html table element to be converted
+            </param>
+            <param name="inheritedProperties">
+            Hashtable representing properties inherited from parent context.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddColumnInformation(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.ArrayList,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Processes the information about table columns - COLGROUP and COL html elements.
+            </summary>
+            <param name="htmlTableElement">
+            XmlElement representing a source html table.
+            </param>
+            <param name="xamlTableElement">
+            XmlElement repesenting a resulting xaml table.
+            </param>
+            <param name="columnStartsAllRows">
+            Array of doubles - column start coordinates.
+            Can be null, which means that column size information is not available
+            and we must use source colgroup/col information.
+            In case wneh it's not null, we will ignore source colgroup/col information.
+            </param>
+            <param name="currentProperties"></param>
+            <param name="stylesheet"></param>
+            <param name="sourceContext"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddTableColumnGroup(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})" -->
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddTableColumn(System.Xml.XmlElement,System.Xml.XmlElement,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Converts htmlColElement into Xaml TableColumn element, and appends it to the parent
+            xamlTableColumnGroupElement
+            </summary>
+            <param name="xamlTableElement"></param>
+            <param name="htmlColElement">
+            XmlElement representing Html col element to be converted
+            </param>
+            <param name="inheritedProperties">
+            properties inherited from parent context
+            </param>
+            <param name="stylesheet"></param>
+            <param name="sourceContext"></param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddTableRowsToTableBody(System.Xml.XmlElement,System.Xml.XmlNode,System.Collections.Hashtable,System.Collections.ArrayList,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Adds TableRow elements to xamlTableBodyElement. The rows are converted from Html tr elements that
+            may be the children of an Html tbody element or an Html table element with tbody missing
+            </summary>
+            <param name="xamlTableBodyElement">
+            XmlElement representing Xaml TableRowGroup element to which the converted rows should be added
+            </param>
+            <param name="htmlTRStartNode">
+            XmlElement representing the first tr child of the tbody element to be read
+            </param>
+            <param name="currentProperties">
+            Hashtable representing current properties of the tbody element that are generated and applied in the
+            AddTable function; to be used as inheritedProperties when adding tr elements
+            </param>
+            <param name="columnStarts"></param>
+            <param name="stylesheet"></param>
+            <param name="sourceContext"></param>
+            <returns>
+            XmlNode representing the current position of the iterator among tr elements
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddTableCellsToTableRow(System.Xml.XmlElement,System.Xml.XmlNode,System.Collections.Hashtable,System.Collections.ArrayList,System.Collections.ArrayList,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Adds TableCell elements to xamlTableRowElement.
+            </summary>
+            <param name="xamlTableRowElement">
+            XmlElement representing Xaml TableRow element to which the converted cells should be added
+            </param>
+            <param name="htmlTDStartNode">
+            XmlElement representing the child of tr or tbody element from which we should start adding td elements
+            </param>
+            <param name="currentProperties">
+            properties of the current html tr element to which cells are to be added
+            </param>
+            <returns>
+            XmlElement representing the current position of the iterator among the children of the parent Html tbody/tr element
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AddDataToTableCell(System.Xml.XmlElement,System.Xml.XmlNode,System.Collections.Hashtable,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            adds table cell data to xamlTableCellElement
+            </summary>
+            <param name="xamlTableCellElement">
+            XmlElement representing Xaml TableCell element to which the converted data should be added
+            </param>
+            <param name="htmlDataStartNode">
+            XmlElement representing the start element of data to be added to xamlTableCellElement
+            </param>
+            <param name="currentProperties">
+            Current properties for the html td/th element corresponding to xamlTableCellElement
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AnalyzeTableStructure(System.Xml.XmlElement,ArcGIS.Desktop.TaskAssistant.CssStylesheet)">
+            <summary>
+            Performs a parsing pass over a table to read information about column width and rowspan attributes. This information
+            is used to determine the starting point of each column.
+            </summary>
+            <param name="htmlTableElement">
+            XmlElement representing Html table whose structure is to be analyzed
+            </param>
+            <returns>
+            ArrayList of type double which contains the function output. If analysis is successful, this ArrayList contains
+            all the points which are the starting position of any column in the table, ordered from left to right.
+            In case if analisys was impossible we return null.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AnalyzeTbodyStructure(System.Xml.XmlElement,System.Collections.ArrayList,System.Collections.ArrayList,System.Double,ArcGIS.Desktop.TaskAssistant.CssStylesheet)">
+            <summary>
+            Performs a parsing pass over a tbody to read information about column width and rowspan attributes. Information read about width
+            attributes is stored in the reference ArrayList parameter columnStarts, which contains a list of all starting
+            positions of all columns in the table, ordered from left to right. Row spans are taken into consideration when
+            computing column starts
+            </summary>
+            <param name="htmlTbodyElement">
+            XmlElement representing Html tbody whose structure is to be analyzed
+            </param>
+            <param name="columnStarts">
+            ArrayList of type double which contains the function output. If analysis fails, this parameter is set to null
+            </param>
+            <param name="tableWidth">
+            Current width of the table. This is used to determine if a new column when added to the end of table should
+            come after the last column in the table or is actually splitting the last column in two. If it is only splitting
+            the last column it should inherit row span for that column
+            </param>
+            <returns>
+            Calculated width of a tbody.
+            In case of non-analizable column width structure return 0;
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.AnalyzeTRStructure(System.Xml.XmlElement,System.Collections.ArrayList,System.Collections.ArrayList,System.Double,ArcGIS.Desktop.TaskAssistant.CssStylesheet)">
+            <summary>
+            Performs a parsing pass over a tr element to read information about column width and rowspan attributes.
+            </summary>
+            <param name="htmlTRElement">
+            XmlElement representing Html tr element whose structure is to be analyzed
+            </param>
+            <param name="columnStarts">
+            ArrayList of type double which contains the function output. If analysis is successful, this ArrayList contains
+            all the points which are the starting position of any column in the tr, ordered from left to right. If analysis fails,
+            the ArrayList is set to null
+            </param>
+            <param name="activeRowSpans">
+            ArrayList representing all columns currently spanned by an earlier row span attribute. These columns should
+            not be used for data in this row. The ArrayList actually contains notation for all columns in the table, if the
+            active row span is set to 0 that column is not presently spanned but if it is > 0 the column is presently spanned
+            </param>
+            <param name="tableWidth">
+            Double value representing the current width of the table.
+            Return 0 if analisys was insuccessful.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetRowSpan(System.Xml.XmlElement)">
+            <summary>
+            Gets row span attribute from htmlTDElement. Returns an integer representing the value of the rowspan attribute.
+            Default value if attribute is not specified or if it is invalid is 1
+            </summary>
+            <param name="htmlTDElement">
+            Html td element to be searched for rowspan attribute
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetNextColumnIndex(System.Int32,System.Double,System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            Gets index at which a column should be inseerted into the columnStarts ArrayList. This is
+            decided by the value columnStart. The columnStarts ArrayList is ordered in ascending order.
+            Returns an integer representing the index at which the column should be inserted
+            </summary>
+            <param name="columnStarts">
+            Array list representing starting coordinates of all columns in the table
+            </param>
+            <param name="columnStart">
+            Starting coordinate of column we wish to insert into columnStart
+            </param>
+            <param name="columnIndex">
+            Int representing the current column index. This acts as a clue while finding the insertion index.
+            If the value of columnStarts at columnIndex is the same as columnStart, then this position alrady exists
+            in the array and we can jsut return columnIndex.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.ClearActiveRowSpans(System.Collections.ArrayList)">
+            <summary>
+            Used for clearing activeRowSpans array in the beginning/end of each tbody
+            </summary>
+            <param name="activeRowSpans">
+            ArrayList representing currently active row spans
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.InitializeActiveRowSpans(System.Collections.ArrayList,System.Int32)">
+            <summary>
+            Used for initializing activeRowSpans array in the before adding rows to tbody element
+            </summary>
+            <param name="activeRowSpans">
+            ArrayList representing currently active row spans
+            </param>
+            <param name="count">
+            Size to be give to array list
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetNextColumnStart(System.Xml.XmlElement,System.Double)">
+            <summary>
+            Calculates width of next TD element based on starting position of current element and it's width, which
+            is calculated byt he function
+            </summary>
+            <param name="htmlTDElement">
+            XmlElement representing Html td element whose width is to be read
+            </param>
+            <param name="columnStart">
+            Starting position of current column
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.CalculateColumnSpan(System.Int32,System.Double,System.Collections.ArrayList)">
+            <summary>
+            Calculates column span based the column width and the widths of all other columns. Returns an integer representing
+            the column span
+            </summary>
+            <param name="columnIndex">
+            Index of the current column
+            </param>
+            <param name="columnWidth">
+            Width of the current column
+            </param>
+            <param name="columnStarts">
+            ArrayList repsenting starting coordinates of all columns
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.VerifyColumnStartsAscendingOrder(System.Collections.ArrayList)">
+            <summary>
+            Verifies that values in columnStart, which represent starting coordinates of all columns, are arranged
+            in ascending order
+            </summary>
+            <param name="columnStarts">
+            ArrayList representing starting coordinates of all columns
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.ApplyLocalProperties(System.Xml.XmlElement,System.Collections.Hashtable,System.Boolean)">
+            <summary>
+            Analyzes local properties of Html element, converts them into Xaml equivalents, and applies them to xamlElement
+            </summary>
+            <param name="xamlElement">
+            XmlElement representing Xaml element to which properties are to be applied
+            </param>
+            <param name="localProperties">
+            Hashtable representing local properties of Html element that is converted into xamlElement
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetElementProperties(System.Xml.XmlElement,System.Collections.Hashtable,System.Collections.Hashtable@,ArcGIS.Desktop.TaskAssistant.CssStylesheet,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Analyzes the tag of the htmlElement and infers its associated formatted properties.
+            After that parses style attribute and adds all inline css styles.
+            The resulting style attributes are collected in output parameter localProperties.
+            </summary>
+            <param name="htmlElement">
+            </param>
+            <param name="inheritedProperties">
+            set of properties inherited from ancestor elements. Currently not used in the code. Reserved for the future development.
+            </param>
+            <param name="localProperties">
+            returns all formatting properties defined by this element - implied by its tag, its attributes, or its css inline style
+            </param>
+            <param name="stylesheet"></param>
+            <param name="sourceContext"></param>
+            <returns>
+            returns a combination of previous context with local set of properties.
+            This value is not used in the current code - inntended for the future development.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.GetCssAttribute(System.String,System.String)">
+            <summary>
+            Extracts a value of css attribute from css style definition.
+            </summary>
+            <param name="cssStyle">
+            Source csll style definition
+            </param>
+            <param name="attributeName">
+            A name of css attribute to extract
+            </param>
+            <returns>
+            A string rrepresentation of an attribute value if found;
+            null if there is no such attribute in a given string.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.TryGetLengthValue(System.String,System.Double@)">
+            <summary>
+            Converts a length value from string representation to a double.
+            </summary>
+            <param name="lengthAsString">
+            Source string value of a length.
+            </param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlToXamlConverter.ApplyPropertiesToTableCellElement(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Applies properties to xamlTableCellElement based on the html td element it is converted from.
+            </summary>
+            <param name="htmlChildNode">
+            Html td/th element to be converted to xaml
+            </param>
+            <param name="xamlTableCellElement">
+            XmlElement representing Xaml element for which properties are to be processed
+            </param>
+            <remarks>
+            TODO: Use the processed properties for htmlChildNode instead of using the node itself
+            </remarks>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter">
+            <summary>
+            HtmlFromXamlConverter is a static class that takes an XAML string
+            and converts it into HTML
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.ConvertXamlToHtml(System.String)">
+            <summary>
+            Main entry point for Xaml-to-Html converter.
+            Converts a xaml string into html string.
+            </summary>
+            <param name="xamlString">
+            Xaml strinng to convert.
+            </param>
+            <returns>
+            Html string produced from a source xaml.
+            </returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.WriteFlowDocument(System.Xml.XmlTextReader,System.Xml.XmlTextWriter)">
+            <summary>
+            Processes a root level element of XAML (normally it's FlowDocument element).
+            </summary>
+            <param name="xamlReader">
+            XmlTextReader for a source xaml.
+            </param>
+            <param name="htmlWriter">
+            XmlTextWriter producing resulting html
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.WriteFormattingProperties(System.Xml.XmlTextReader,System.Xml.XmlTextWriter,System.Text.StringBuilder)">
+            <summary>
+            Reads attributes of the current xaml element and converts
+            them into appropriate html attributes or css styles.
+            </summary>
+            <param name="xamlReader">
+            XmlTextReader which is expected to be at XmlNodeType.Element
+            (opening element tag) position.
+            The reader will remain at the same level after function complete.
+            </param>
+            <param name="htmlWriter">
+            XmlTextWriter for output html, which is expected to be in
+            after WriteStartElement state.
+            </param>
+            <param name="inlineStyle">
+            String builder for collecting css properties for inline STYLE attribute.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.WriteElementContent(System.Xml.XmlTextReader,System.Xml.XmlTextWriter,System.Text.StringBuilder)">
+            <summary>
+            Reads a content of current xaml element, converts it
+            </summary>
+            <param name="xamlReader">
+            XmlTextReader which is expected to be at XmlNodeType.Element
+            (opening element tag) position.
+            </param>
+            <param name="htmlWriter">
+            May be null, in which case we are skipping the xaml element;
+            witout producing any output to html.
+            </param>
+            <param name="inlineStyle">
+            StringBuilder used for collecting css properties for inline STYLE attribute.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.AddComplexProperty(System.Xml.XmlTextReader,System.Text.StringBuilder)">
+            <summary>
+            Conberts an element notation of complex property into
+            </summary>
+            <param name="xamlReader">
+            On entry this XmlTextReader must be on Element start tag;
+            on exit - on EndElement tag.
+            </param>
+            <param name="inlineStyle">
+            StringBuilder containing a value for STYLE attribute.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.WriteElement(System.Xml.XmlTextReader,System.Xml.XmlTextWriter,System.Text.StringBuilder)">
+            <summary>
+            Converts a xaml element into an appropriate html element.
+            </summary>
+            <param name="xamlReader">
+            On entry this XmlTextReader must be on Element start tag;
+            on exit - on EndElement tag.
+            </param>
+            <param name="htmlWriter">
+            May be null, in which case we are skipping xaml content
+            without producing any html output
+            </param>
+            <param name="inlineStyle">
+            StringBuilder used for collecting css properties for inline STYLE attributes on every level.
+            </param>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.HtmlFromXamlConverter.ReadNextToken(System.Xml.XmlReader)">
+            <summary>
+            Reads several items from xamlReader skipping all non-significant stuff.
+            </summary>
+            <param name="xamlReader">
+            XmlTextReader from tokens are being read.
+            </param>
+            <returns>
+            True if new token is available; false if end of stream reached.
+            </returns>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.ArcGISVersion">
+            <summary>
+              Looks up a localized string similar to ArcGIS Version:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Author">
+            <summary>
+              Looks up a localized string similar to Author:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Confirm">
+            <summary>
+              Looks up a localized string similar to Please confirm task file installation..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Description">
+            <summary>
+              Looks up a localized string similar to Description:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Install">
+            <summary>
+              Looks up a localized string similar to Install Task File.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_AccessDenied">
+            <summary>
+              Looks up a localized string similar to Failed to copy task file to {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_AppName">
+            <summary>
+              Looks up a localized string similar to Esri ArcGIS Task File Installation.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_FileExists">
+            <summary>
+              Looks up a localized string similar to A Task File with the same name already exists. Choose Yes to proceed with installation, choose No to cancel..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_FileExistsHigherVersion">
+            <summary>
+              Looks up a localized string similar to A more recent version of the Task File already exists. Choose Yes to proceed with installation, choose No to cancel..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_NoMatch">
+            <summary>
+              Looks up a localized string similar to Unable to find a matching ArcGIS installation on this machine. Choose Yes to proceed with installation, choose No to cancel..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_RegFail">
+            <summary>
+              Looks up a localized string similar to Installation failed..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_RegSuccess">
+            <summary>
+              Looks up a localized string similar to Installation succeeded..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Msg_UnReg_MissingID">
+            <summary>
+              Looks up a localized string similar to /u failed. Task File id is required..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.Name">
+            <summary>
+              Looks up a localized string similar to Name:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.RegistrationDlgRes.TaskFileVersion">
+            <summary>
+              Looks up a localized string similar to Task File Version:.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes.BadGPPathName">
+            <summary>
+              Looks up a localized string similar to Invalid GP tool name (refID).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes.CancelMessage">
+            <summary>
+              Looks up a localized string similar to Cancel command.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantEmbeddingRes.ErrorRunning">
+            <summary>
+              Looks up a localized string similar to Error running tool.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.Registration.RegistrationDlg">
+            <summary>
+            Interaction logic for MainDlg.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.Registration.RegistrationDlg.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes.CancelLabel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes.DlgCaption">
+            <summary>
+              Looks up a localized string similar to Select Task File.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.SelectTaskFileRes.OkLabel">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Favorites">
+            <summary>
+              Looks up a localized string similar to Favorites.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.LoadingErrorMsg">
+            <summary>
+              Looks up a localized string similar to Error loading files..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.LoadingFileDlgCaption">
+            <summary>
+              Looks up a localized string similar to Loading Tasks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.LoadingFileDlgErrorMsg">
+            <summary>
+              Looks up a localized string similar to Error reading file {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.LoadingModuleError">
+            <summary>
+              Looks up a localized string similar to Unable to load Task Assistant module..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_DeleteFileError">
+            <summary>
+              Looks up a localized string similar to Unable to delete file {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_InvalidTaskFile">
+            <summary>
+              Looks up a localized string similar to Invalid task file.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_MissingArcGISVersion">
+            <summary>
+              Looks up a localized string similar to Missing ArcGIS version..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_MissingName">
+            <summary>
+              Looks up a localized string similar to Missing name information..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_MissingTaskFileVersion">
+            <summary>
+              Looks up a localized string similar to Missing task file version..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_MissingTaskId">
+            <summary>
+              Looks up a localized string similar to Missing task id..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_MissingTaskInfo">
+            <summary>
+              Looks up a localized string similar to Missing task information..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_OpenFailed">
+            <summary>
+              Looks up a localized string similar to Failed to open {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_OpenFileError">
+            <summary>
+              Looks up a localized string similar to Unable to open file at {0}.  No task file is registered..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_TaskAssistant">
+            <summary>
+              Looks up a localized string similar to Task Assistant.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_TaskClear">
+            <summary>
+              Looks up a localized string similar to Do you wish to clear the current task file?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_TaskInProgress">
+            <summary>
+              Looks up a localized string similar to A task is currently in progress. .
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_TaskReplace">
+            <summary>
+              Looks up a localized string similar to Do you wish to replace the current task file?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.Msg_TaskUpdate">
+            <summary>
+              Looks up a localized string similar to Do you wish to reload the current task file?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.SavingFileDlgCaption">
+            <summary>
+              Looks up a localized string similar to Saving Tasks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantRes.SavingFileDlgErrorMsg">
+            <summary>
+              Looks up a localized string similar to Error writing file {0}.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.AttErrorField">
+            <summary>
+              Looks up a localized string similar to Cannot set attribute. Unable to retrieve specified field {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.AttErrorSelection">
+            <summary>
+              Looks up a localized string similar to Cannot set attribute. Unable to retrieve selection {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.AttributeError">
+            <summary>
+              Looks up a localized string similar to Cannot retrieve attribute. You do not have 1 feature selected..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.Error">
+            <summary>
+              Looks up a localized string similar to Error : {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.FinishLabel">
+            <summary>
+              Looks up a localized string similar to Finish.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.FinishTooltip">
+            <summary>
+              Looks up a localized string similar to Finish (F3).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.ProceedLabel">
+            <summary>
+              Looks up a localized string similar to Next Step.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.ProceedTooltip">
+            <summary>
+              Looks up a localized string similar to Proceed to the next step (F3).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.ProgressLabel">
+            <summary>
+              Looks up a localized string similar to Progress ({0}/{1}).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.QAErrorCount">
+            <summary>
+              Looks up a localized string similar to There are {0} error(s)..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.RunLabel">
+            <summary>
+              Looks up a localized string similar to Run.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.RunTooltip">
+            <summary>
+              Looks up a localized string similar to Run the current step (F3).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.SkipLabel">
+            <summary>
+              Looks up a localized string similar to Skip.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.SkipTooltip">
+            <summary>
+              Looks up a localized string similar to Skip the current step (F4).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantTaskViewRes.StepLabel">
+            <summary>
+              Looks up a localized string similar to {0}.  {1}.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.BackTooltip">
+            <summary>
+              Looks up a localized string similar to Back.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.BurgerTooltip">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ExportTaskDefaultFileName">
+            <summary>
+              Looks up a localized string similar to DumpedTasks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ExportTaskDlgCaption">
+            <summary>
+              Looks up a localized string similar to Exporting Tasks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ExportTaskDlgMsg">
+            <summary>
+              Looks up a localized string similar to Tasks Dumped.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ExportTaskExt">
+            <summary>
+              Looks up a localized string similar to *.esriTasks.xml.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.ExportTaskFileFilter">
+            <summary>
+              Looks up a localized string similar to Task files (.esriTasks.xml)|*.esriTasks.xml.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.MissingLabel">
+            <summary>
+              Looks up a localized string similar to missing.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.NotAvailableYet">
+            <summary>
+              Looks up a localized string similar to Not available yet.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.OptionsTooltip">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.PalettteContainsNonStep">
+            <summary>
+              Looks up a localized string similar to Palette item is not a step.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.UpdateMsg_HigherVersion">
+            <summary>
+              Looks up a localized string similar to Current task file version: {0}.  New task file version: {1}.  Would you like to update your task file?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.UpdateMsg_NoSource">
+            <summary>
+              Looks up a localized string similar to Source file cannot be accessed.  Source {0}..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.UpdateMsg_NoSource2">
+            <summary>
+              Looks up a localized string similar to Source file not specified. No updates can be retrieved..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.TaskAssistant.LocalResources.TaskAssistantViewRes.UpdateMsg_NoUpdates">
+            <summary>
+              Looks up a localized string similar to No updates found. Task file is current.  Version {0}..
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.SelectTaskFileView">
+            <summary>
+            Interaction logic for SelectTaskFileView.xaml
+            </summary>
+            <summary>
+            SelectTaskFileView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.SelectTaskFileView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.TaskAssistantTaskView">
+            <summary>
+            Interaction logic for TaskAssistantTaskView.xaml
+            </summary>
+            <summary>
+            TaskAssistantTaskView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.TaskAssistantTaskView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.TaskAssistantView">
+            <summary>
+            Interaction logic for TaskAssistantView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.TaskAssistantView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.TaskAssistant.TaskLib.DockPaneBase">
+            <summary>
+            common methods for Editing dockpanes,
+            primarily to take care of visibility when pin/unpin and queueing.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.TaskAssistant.TaskLib.TaskUtil.StripTrailingText(System.String,System.String)">
+            <summary>
+            strips the pattern from the trailing end of given text, which must be at the trailing end of the text.
+            This is needed to avoid problems if we ever create a namespace that includes "ViewModel"
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

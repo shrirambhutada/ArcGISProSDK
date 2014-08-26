@@ -1,0 +1,1709 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.Layouts</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGIS.Desktop.Layouts.Control.CloseMapFrameActivationOverlay">
+            <summary>
+            Interaction logic for CloseMapFrameActivationOverlay.xaml
+            </summary>
+            <summary>
+            CloseMapFrameActivationOverlay
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Control.CloseMapFrameActivationOverlay.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.DeleteMapFrameDialogView">
+            <summary>
+            Interaction logic for DeleteMapFrameDialogView.xaml
+            </summary>
+            <summary>
+            DeleteMapFrameDialogView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DeleteMapFrameDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.LocalResources.LocalRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraCenter">
+            <summary>
+              Looks up a localized string similar to Center.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraCenterAndScale">
+            <summary>
+              Looks up a localized string similar to Center and Scale.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraExtent">
+            <summary>
+              Looks up a localized string similar to Extent.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraFixedCenterAndScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the specified center point and scale.   Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraFixedCenterTip">
+            <summary>
+              Looks up a localized string similar to Center the map on the specified point.   Pan tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraFixedExtentTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the specified extent.   Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraFixedScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the specified scale.  Zoom tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapFrameLinkCenterAndScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same center point and scale as another map frame.  Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapFrameLinkCenterTip">
+            <summary>
+              Looks up a localized string similar to Pan the map to the center point of another map frame. Pan tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapFrameLinkExtentTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same extent as another map frame.  Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapFrameLinkScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same scale as another map frame.   Zoom tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapSeriesLinkCenterAndScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same center point and scale as the current map series indexed map frame.  Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapSeriesLinkCenterTip">
+            <summary>
+              Looks up a localized string similar to Pan the map to the center point of the current map series indexed map frame.  Pan tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapSeriesLinkExtentTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same extent as the current map series indexed map frame.  Navigation tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraMapSeriesLinkScaleTip">
+            <summary>
+              Looks up a localized string similar to Show the map at the same scale as the current map series indexed map frame.  Zoom tools are disabled..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.AutoCameraScale">
+            <summary>
+              Looks up a localized string similar to Scale.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.BestFit">
+            <summary>
+              Looks up a localized string similar to Best Fit Extent.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.CreatingDefaultStyles">
+            <summary>
+              Looks up a localized string similar to Creating default styles.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultLineSymbol">
+            <summary>
+              Looks up a localized string similar to Black (1 pt).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultNorthArrow">
+            <summary>
+              Looks up a localized string similar to ArcGIS North 1.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultPointSymbol">
+            <summary>
+              Looks up a localized string similar to Circle 1.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultPolygonSymbol">
+            <summary>
+              Looks up a localized string similar to Black Outline (1pt).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultScaleBar">
+            <summary>
+              Looks up a localized string similar to Scale Line 1 Metric.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.DefaultTextSymbol">
+            <summary>
+              Looks up a localized string similar to Text (Layout).
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.Element">
+            <summary>
+              Looks up a localized string similar to Element.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.ElementMustHaveAName">
+            <summary>
+              Looks up a localized string similar to The element name can not be blank.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.ElementNameMustBeUnique">
+            <summary>
+              Looks up a localized string similar to Element name must be unique..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.FlagsHeaderText">
+            <summary>
+              Looks up a localized string similar to Options.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.GridNorth">
+            <summary>
+              Looks up a localized string similar to Grid North.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.GridNorthTip">
+            <summary>
+              Looks up a localized string similar to Display the angle of the vertical grid lines on the map.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.Heading">
+            <summary>
+              Looks up a localized string similar to Heading.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidAngle">
+            <summary>
+              Looks up a localized string similar to Angle must be between 0 and 360.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidAngle2">
+            <summary>
+              Looks up a localized string similar to Angle must be between -360 and 360..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidHeight">
+            <summary>
+              Looks up a localized string similar to The height must be greater than 0.0.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidNumber">
+            <summary>
+              Looks up a localized string similar to Invalid value.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidScale">
+            <summary>
+              Looks up a localized string similar to Scale must be a positive number.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidWidth">
+            <summary>
+              Looks up a localized string similar to The width must be greater than 0.0.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidXCoordinate">
+            <summary>
+              Looks up a localized string similar to Invalid X-Coodinate.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.InvalidYCoordinate">
+            <summary>
+              Looks up a localized string similar to Invalid Y-Coordinate.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.LockedHeight">
+            <summary>
+              Looks up a localized string similar to Lock Height.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.LockedScale">
+            <summary>
+              Looks up a localized string similar to Lock Scale.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.LockedText">
+            <summary>
+              Looks up a localized string similar to Locked.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.LockedTip">
+            <summary>
+              Looks up a localized string similar to Prevent element from being modified.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MagneticNorth">
+            <summary>
+              Looks up a localized string similar to Magnetic North.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MagneticNorthTip">
+            <summary>
+              Looks up a localized string similar to Display the angle of a line between the map&apos;s center point and the magnetic north pole, as indicated by the north-seeking needle of a magnetic instrument..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MapFrame">
+            <summary>
+              Looks up a localized string similar to Map Frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MapSurround">
+            <summary>
+              Looks up a localized string similar to Map Surround.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginMapUnits">
+            <summary>
+              Looks up a localized string similar to Map Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginMapUnitsTip">
+            <summary>
+              Looks up a localized string similar to Extent is expanded by the specifed number of map units..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginPageUnits">
+            <summary>
+              Looks up a localized string similar to Page Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginPageUnitsTip">
+            <summary>
+              Looks up a localized string similar to Extent is expanded by the specified number of page units..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginPercent">
+            <summary>
+              Looks up a localized string similar to Percent.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.MarginPercentTip">
+            <summary>
+              Looks up a localized string similar to Extent is expanded by the specified percentage.  100% provides an exact match..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.NorthArrow">
+            <summary>
+              Looks up a localized string similar to North Arrow.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.NotLockedText">
+            <summary>
+              Looks up a localized string similar to Not Locked.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.NotVisibleText">
+            <summary>
+              Looks up a localized string similar to Not Visible.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.Rotation">
+            <summary>
+              Looks up a localized string similar to Rotation.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.ScaleLabel">
+            <summary>
+              Looks up a localized string similar to Scale:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.ScaleLabel3D">
+            <summary>
+              Looks up a localized string similar to Height:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEAllText">
+            <summary>
+              Looks up a localized string similar to All Text.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEBackground">
+            <summary>
+              Looks up a localized string similar to Background.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEBorder">
+            <summary>
+              Looks up a localized string similar to Border.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEElements">
+            <summary>
+              Looks up a localized string similar to Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEGroup">
+            <summary>
+              Looks up a localized string similar to Group.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SELine">
+            <summary>
+              Looks up a localized string similar to Line Symbol.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEMapFrame">
+            <summary>
+              Looks up a localized string similar to Map Frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEMulti">
+            <summary>
+              Looks up a localized string similar to Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SENorthArrow">
+            <summary>
+              Looks up a localized string similar to North Arrow.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEParagraph">
+            <summary>
+              Looks up a localized string similar to Paragraph.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEPicture">
+            <summary>
+              Looks up a localized string similar to Picture.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEPoint">
+            <summary>
+              Looks up a localized string similar to Point Symbol.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEPolygon">
+            <summary>
+              Looks up a localized string similar to Fill Symbol.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBar">
+            <summary>
+              Looks up a localized string similar to Scale Bar.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarMarks">
+            <summary>
+              Looks up a localized string similar to Division Marks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarNumbers">
+            <summary>
+              Looks up a localized string similar to Numbers.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarSubMarks">
+            <summary>
+              Looks up a localized string similar to Subdivision Marks.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarSym1">
+            <summary>
+              Looks up a localized string similar to Symbol 1.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarSym2">
+            <summary>
+              Looks up a localized string similar to Symbol 2.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEScaleBarUnits">
+            <summary>
+              Looks up a localized string similar to Units.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEShadow">
+            <summary>
+              Looks up a localized string similar to Shadow.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SEText">
+            <summary>
+              Looks up a localized string similar to Text Symbol.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SimpleNorth">
+            <summary>
+              Looks up a localized string similar to Map North.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.SimpleNorthTip">
+            <summary>
+              Looks up a localized string similar to Display the map frame rotation angle.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.TrueNorth">
+            <summary>
+              Looks up a localized string similar to True North.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.TrueNorthTip">
+            <summary>
+              Looks up a localized string similar to Display the angle of a line between the map&apos;s center point and the north pole.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.VisibleText">
+            <summary>
+              Looks up a localized string similar to Visible.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LocalResources.LocalRes.VisibleTip">
+            <summary>
+              Looks up a localized string similar to Draw element on the layout.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.LayoutOptionsView">
+            <summary>
+            Interaction logic for LayoutOptionsView.xaml
+            </summary>
+            <summary>
+            LayoutOptionsView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.LayoutOptionsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.Ribbon.SizeAndPositionControl">
+            <summary>
+            Interaction logic for SizeAndPositionControl.xaml
+            </summary>
+            <summary>
+            SizeAndPositionControl
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Ribbon.SizeAndPositionControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl">
+            <summary>
+            Interaction logic for LayoutReadoutControl.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl.OnActiveViewChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Raised when the ActiveViewProperty dependency property changes.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl.OnZoomReadoutChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Raised when the ZoomReadoutProperty dependency property changes.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl.ActiveView">
+            <summary>
+            Gets or sets the View property.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Control.LayoutReadoutControl.ZoomReadout">
+            <summary>
+            Gets or sets the ZoomReadout property.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Element.GetXMLAsync">
+            <summary>Get the CIM definition for the element.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Element.SetXMLAsync(System.String)">
+            <summary>Initialize the element based on the CIM definition.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.MapFrame.SetViewAsync(ArcGIS.Desktop.Mapping.MapView,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Copy view settings from CIMMapView to CIM.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.MapFrame.SetViewAsync(CIMMapView,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Copy view settings from MapView to CIM.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.SetNameAsync(System.String,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that renames the layout.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.SetPageAsync(CIMPage,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that sets a new page into the layout.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.ShowProperties">
+            <summary>Shows a property sheet for the layout.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.InsertElementsAsync(CIMElement[],System.String[],System.Int32[],ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Insert elements at the specified indices.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.PasteElementsAsync(CIMElement[],System.String,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Pastes elements at the specified location.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.DeleteElementsAsync(System.String[],ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Deletes elements by name.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.UpdateElementsAsync(System.String[],System.String[],ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Updates the elements with the specified CIM xml strings.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.Dispose">
+            <summary>Performs cleanup on the layout before it's destroyed.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.DoBulkUpdate(System.String[],System.Boolean,System.Action{CIMElement,System.Int32})">
+            <summary>
+            Convenience method to handle arbitrary updates to the CIM definition of an element. 
+            Caller supplies a lambda in which the CIMElement is modified.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Models.Layout.GetElementXMLAsync(System.String[])">
+            <summary>Get CIM definitions for the elements.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Models.Layout.Name">
+            <summary>The name of the layout.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Models.Layout.Page">
+            <summary>The layout's page object.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Models.Layout.ProjectID">
+            <summary>The ID of the project that contains this layout.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Models.Layout.Path">
+            <summary>The path of the layout in the project.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Models.Layout.OperationManager">
+            <summary>The layout's OperationManager.</summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.LayoutView">
+            <summary>
+            Interaction logic for LayoutControl.xaml
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.LayoutView._mapFrameActivated">
+            <summary>
+            Check if there's an activated map frame.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.LayoutView._defaultMapFrame">
+            <summary>
+            Default map
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LayoutView.Layout">
+            <summary>
+            Reference to the Layout model
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LayoutView.ElementSelection">
+            <summary>
+            Elements currently selected in this pane.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LayoutView.DefaultMapFrameExists">
+            <summary>
+            Check if there's a default map frame.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.MapFrameViewPage">
+            <summary>
+            MapFrameViewPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.MapFrameViewPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.ElementPositionPage">
+            <summary>
+            Interaction logic for ElementPositionPage.xaml
+            </summary>
+            <summary>
+            ElementPositionPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.ElementPositionPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.MapSurroundGeneralPage">
+            <summary>
+            Interaction logic for MapSurroundGeneralPage.xaml
+            </summary>
+            <summary>
+            MapSurroundGeneralPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.MapSurroundGeneralPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.ElementSizePage">
+            <summary>
+            Interaction logic for ElementSizePage.xaml
+            </summary>
+            <summary>
+            ElementSizePage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.ElementSizePage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.NorthArrowGeneralPage">
+            <summary>
+            Interaction logic for NorthArrowGeneralPage.xaml
+            </summary>
+            <summary>
+            NorthArrowGeneralPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.NorthArrowGeneralPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.ElementGeneralPage">
+            <summary>
+            Interaction logic for ElementGeneralPage.xaml
+            </summary>
+            <summary>
+            ElementGeneralPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.ElementGeneralPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.MapFrameGeneralPage">
+            <summary>
+            Interaction logic for MapFrameGeneralPage.xaml
+            </summary>
+            <summary>
+            MapFrameGeneralPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.MapFrameGeneralPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.PrinterSettingsDialogView">
+            <summary>
+            Interaction logic for PrinterSettingsDialogView.xaml
+            </summary>
+            <summary>
+            PrinterSettingsDialogView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.PrinterSettingsDialogView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.TOC.TOCControl">
+            <summary>
+            Interaction logic for TOCControl.xaml
+            </summary>
+            <summary>
+            TOCControl
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.TOC.TOCControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:ArcGIS.Desktop.Layouts.Ruler" -->
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.LengthProperty">
+            <summary>
+            Identifies the Length dependency property.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.AutoSizeProperty">
+            <summary>
+            Identifies the AutoSize dependency property.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.ZoomProperty">
+            <summary>
+            Identifies the Zoom dependency property.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.ChipProperty">
+            <summary>
+            Chip Dependency Property
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.CountShiftProperty">
+            <summary>
+            CountShift Dependency Property
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.MarksProperty">
+            <summary>
+            Marks Dependency Property
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.Ruler.UnitProperty">
+            <summary>
+            Identifies the Units dependency property.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Ruler.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>
+            Participates in rendering operations.
+            </summary>
+            <param name="drawingContext">The drawing instructions for a specific element. This context is provided to the layout system.</param>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Ruler.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures an instance during the first layout pass prior to arranging it.
+            </summary>
+            <param name="availableSize">A maximum Size to not exceed.</param>
+            <returns>The maximum Size for the instance.</returns>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.Length">
+            <summary>
+            Gets or sets the length of the ruler. If the <see cref="P:ArcGIS.Desktop.Layouts.Ruler.AutoSize"/> property is set to false (default) this
+            is a fixed length. Otherwise the length is calculated based on the actual width of the ruler.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.AutoSize">
+            <summary>
+            Gets or sets the AutoSize behavior of the ruler.
+            false (default): the length of the ruler results from the <see cref="P:ArcGIS.Desktop.Layouts.Ruler.Length"/> property. If the window size is changed, e.g. wider
+            					than the rulers length, free space is shown at the end of the ruler. No rescaling is done.
+            true				 : the length of the ruler is always adjusted to its actual width. This ensures that the ruler is shown
+            					for the actual width of the window.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.Zoom">
+            <summary>
+            Gets or sets the zoom factor for the ruler. The default value is 1.0. 
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.Chip">
+            <summary>
+            Sets the location of the chip in the units of the ruler.
+            So, to set the chip to 10 in cm units the chip needs to be set to 10.
+            Use the <see cref="T:ArcGIS.Desktop.Layouts.DipHelper"/> class for conversions.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.CountShift">
+            <summary>
+            By default the counting of inches or cm starts at zero, this property allows you to shift
+            the counting.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.Marks">
+            <summary>
+            Gets or sets where the marks are shown in the ruler.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Ruler.Units">
+            <summary>
+            Gets or sets the unit of the ruler.
+            Default value is PageUnits.Centimeters.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.DipHelper">
+            <summary>
+            A helper class for DIP (Device Independent Pixels) conversion and scaling operations.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.MmToDip(System.Double)">
+            <summary>
+            Converts millimeters to DIP (Device Independant Pixels).
+            </summary>
+            <param name="mm">A millimeter value.</param>
+            <returns>A DIP value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.CmToDip(System.Double)">
+            <summary>
+            Converts centimeters to DIP (Device Independant Pixels).
+            </summary>
+            <param name="cm">A centimeter value.</param>
+            <returns>A DIP value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.InchToDip(System.Double)">
+            <summary>
+            Converts inches to DIP (Device Independant Pixels).
+            </summary>
+            <param name="inch">An inch value.</param>
+            <returns>A DIP value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.PtToDip(System.Double)">
+            <summary>
+            Converts font points to DIP (Device Independant Pixels).
+            </summary>
+            <param name="pt">A font point value.</param>
+            <returns>A DIP value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.DipToCm(System.Double)">
+            <summary>
+            Converts DIP (Device Independant Pixels) to centimeters.
+            </summary>
+            <param name="dip">A DIP value.</param>
+            <returns>A centimeter value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.DipToMm(System.Double)">
+            <summary>
+            Converts DIP (Device Independant Pixels) to millimeters.
+            </summary>
+            <param name="dip">A DIP value.</param>
+            <returns>A millimeter value.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.GetSystemDpiFactor">
+            <summary>
+            Gets the system DPI scale factor (compared to 96 dpi).
+            From http://blogs.msdn.com/jaimer/archive/2007/03/07/getting-system-dpi-in-wpf-app.aspx
+            Should not be called before the Loaded event (else XamlException mat throw)
+            </summary>
+            <returns>A System.Windows.Point object containing the X- and Y- scale factor.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.GetSystemDpi">
+            <summary>
+            Gets the system configured DPI.
+            </summary>
+            <returns>A System.Windows.Point object containing the X- and Y- DPI.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.GetPhysicalDpi(System.Double)">
+            <summary>
+            Gets the physical pixel density (DPI) of the screen.
+            </summary>
+            <param name="diagonalScreenSize">Size - in inch - of the diagonal of the screen.</param>
+            <returns>A System.Windows.Point object containing the X- and Y- DPI.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.DpiToScaleFactor(System.Windows.Point)">
+            <summary>
+            Converts a DPI into a scale factor (compared to system DPI).
+            </summary>
+            <param name="dpi">A System.Windows.Point object containing the X- and Y- DPI to convert.</param>
+            <returns>A System.Windows.Point object containing the X- and Y- scale factor.</returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.DipHelper.GetScreenIndependentScaleFactor(System.Double)">
+            <summary>
+            Gets the scale factor to apply to a WPF application
+            so that 96 DIP always equals 1 inch on the screen (whatever the system DPI).
+            </summary>
+            <param name="diagonalScreenSize">Size - in inch - of the diagonal of the screen</param>
+            <returns>A System.Windows.Point object containing the X- and Y- scale factor.</returns>
+        </member>
+        <member name="M:ServiceContracts.ILayoutViewerService.FindMapViewer(System.String,System.String)">
+            <summary>
+            Finds an embedded map viewer.
+            </summary>
+            <param name="cimLayoutPath">CIM path of the layout</param>
+            <param name="mapElementName">Map frame name</param>
+            <returns></returns>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.Control.LayoutControl">
+            <summary>
+            Interaction logic for LayoutControl.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.Control.LayoutControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.GetModule">
+            <summary>Returns a reference to the Layout module of the application.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.CreateLayoutAsync(CIMPage,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that creates a new layout in the project.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.OpenCreateLayoutAsync(CIMPage,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that creates a new layout in the project and then opens a new layout pane.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.InternalOpenLayoutAsync(System.String,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that opens an existing layout in the project.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.RemoveLayoutAsync(System.String,ArcGIS.Desktop.Framework.Threading.Tasks.Progressor)">
+            <summary>Starts a task that removes a layout from the project.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.OpenLayoutPane(ArcGIS.Desktop.Layouts.Models.Layout)">
+            <summary>Opens a new pane for a layout.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.GetLayoutPanes(ArcGIS.Desktop.Layouts.Models.Layout)">
+            <summary>Gets the layout panes currently open in the application.</summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Layouts.LayoutsModule._initializing">
+            <summary>Called by framework to initialize module.</summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutsModule.Dispose">
+            <summary>Performs cleanup on the module before it's destroyed.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LayoutsModule.ActiveLayoutView">
+            <summary>Gets the layout pane currently showing in the application.</summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.LayoutsModule.Layouts">
+            <summary>Gets the layouts currently open in the application.</summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.LayoutPaneView">
+            <summary>
+            Interaction logic for LayoutPaneView.xaml
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.LayoutPaneView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.AbbreviationCentimeters">
+            <summary>
+              Looks up a localized string similar to cm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.AbbreviationInches">
+            <summary>
+              Looks up a localized string similar to in.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.AbbreviationMillimeters">
+            <summary>
+              Looks up a localized string similar to mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.AbbreviationPoints">
+            <summary>
+              Looks up a localized string similar to pt.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.All">
+            <summary>
+              Looks up a localized string similar to All.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.AllSizes">
+            <summary>
+              Looks up a localized string similar to All Sizes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ANSI">
+            <summary>
+              Looks up a localized string similar to ANSI Sizes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ANSILandscape">
+            <summary>
+              Looks up a localized string similar to ANSI - Landscape.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ANSIPortrait">
+            <summary>
+              Looks up a localized string similar to ANSI - Portrait.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ArcGISFiles_Desc">
+            <summary>
+              Looks up a localized string similar to ArcGIS Files.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Architectural">
+            <summary>
+              Looks up a localized string similar to Architectural Sizes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ArchitecturalLandscape">
+            <summary>
+              Looks up a localized string similar to Architectural - Landscape.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ArchitecturalPortrait">
+            <summary>
+              Looks up a localized string similar to Architectural - Portrait.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Centimeters">
+            <summary>
+              Looks up a localized string similar to centimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.DeleteMapWarning">
+            <summary>
+              Looks up a localized string similar to This map is used in one or more layouts in your project. Are you sure you want to remove it?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementCircle">
+            <summary>
+              Looks up a localized string similar to Circle.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementEllipse">
+            <summary>
+              Looks up a localized string similar to Ellipse.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementLasso">
+            <summary>
+              Looks up a localized string similar to Lasso.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementLine">
+            <summary>
+              Looks up a localized string similar to Line.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementMapFrame">
+            <summary>
+              Looks up a localized string similar to Map Frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementOpenLasso">
+            <summary>
+              Looks up a localized string similar to Sketch.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementPoint">
+            <summary>
+              Looks up a localized string similar to Point.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementPolygon">
+            <summary>
+              Looks up a localized string similar to Polygon.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementPropertySheetTitle">
+            <summary>
+              Looks up a localized string similar to {0} Properties.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ElementRectangle">
+            <summary>
+              Looks up a localized string similar to Rectangle.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Exception_ErrorFMT">
+             <summary>
+               Looks up a localized string similar to {0}
+            
+            Error: 
+            {1}.
+             </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionBmp">
+            <summary>
+              Looks up a localized string similar to BMP.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionEmf">
+            <summary>
+              Looks up a localized string similar to EMF.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionEps">
+            <summary>
+              Looks up a localized string similar to EPS.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionGif">
+            <summary>
+              Looks up a localized string similar to GIF.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionJpg">
+            <summary>
+              Looks up a localized string similar to JPG.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionPdf">
+            <summary>
+              Looks up a localized string similar to PDF.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionPng">
+            <summary>
+              Looks up a localized string similar to PNG.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionSvg">
+            <summary>
+              Looks up a localized string similar to SVG.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionTga">
+            <summary>
+              Looks up a localized string similar to TGA.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ExportDescriptionTif">
+            <summary>
+              Looks up a localized string similar to TIFF.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.GetLayoutInfoProgress">
+            <summary>
+              Looks up a localized string similar to Opening Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Inches">
+            <summary>
+              Looks up a localized string similar to inches.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ISO">
+            <summary>
+              Looks up a localized string similar to ISO Sizes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ISOLandscape">
+            <summary>
+              Looks up a localized string similar to ISO - Landscape.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ISOPortrait">
+            <summary>
+              Looks up a localized string similar to ISO - Portrait.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Landscape">
+            <summary>
+              Looks up a localized string similar to Landscape.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Layout_ErrorLoad">
+            <summary>
+              Looks up a localized string similar to Failed to load the layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutErrorCreateNew">
+            <summary>
+              Looks up a localized string similar to Couldn&apos;t create layout..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutExportError">
+            <summary>
+              Looks up a localized string similar to Failed to export layout..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutExportProgressor">
+            <summary>
+              Looks up a localized string similar to Exporting layout....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutExportTitle">
+            <summary>
+              Looks up a localized string similar to Export Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutImport_Title">
+            <summary>
+              Looks up a localized string similar to Import Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.LayoutSelectionCountReadoutFormat">
+            <summary>
+              Looks up a localized string similar to {0} elements selected.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Loading">
+            <summary>
+              Looks up a localized string similar to Loading....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.MapFrame">
+            <summary>
+              Looks up a localized string similar to MapFrame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Millimeters">
+            <summary>
+              Looks up a localized string similar to millimeters.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.MSDFile_Desc">
+            <summary>
+              Looks up a localized string similar to Map Server Definition Files.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.MXDFile_Desc">
+            <summary>
+              Looks up a localized string similar to ArcMap Documents.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.NewGraphic">
+            <summary>
+              Looks up a localized string similar to Creating new graphic element.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.NewMapFrame">
+            <summary>
+              Looks up a localized string similar to Creating new map frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.NewMapFrameSource">
+            <summary>
+              Looks up a localized string similar to Use {0} when inserting a new map frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.NewMapFrameSourceEmptyTip">
+            <summary>
+              Looks up a localized string similar to Leave map empty when inserting a new map frame.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.None">
+            <summary>
+              Looks up a localized string similar to &lt;None&gt;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.NorthArrow">
+            <summary>
+              Looks up a localized string similar to North Arrow.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OpenNewLayout">
+            <summary>
+              Looks up a localized string similar to Opening new layout....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationApplyElementStyle">
+            <summary>
+              Looks up a localized string similar to Format {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationApplyElementStyles">
+            <summary>
+              Looks up a localized string similar to Format {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationConvertManyToGraphicsName">
+            <summary>
+              Looks up a localized string similar to Convert {0} Elements To Graphics.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationConvertOneToGraphicsName">
+            <summary>
+              Looks up a localized string similar to Convert {0} To Graphics.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationDeleteElementName">
+            <summary>
+              Looks up a localized string similar to Delete {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationDeleteElementsName">
+            <summary>
+              Looks up a localized string similar to Delete {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationGroupElementsName">
+            <summary>
+              Looks up a localized string similar to Group {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationInsertElementName">
+            <summary>
+              Looks up a localized string similar to Insert {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationMoveAndRotateElementName">
+            <summary>
+              Looks up a localized string similar to Move/Rotate {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationMoveAndRotateElementsName">
+            <summary>
+              Looks up a localized string similar to Move/Rotate {0} elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationMoveElements">
+            <summary>
+              Looks up a localized string similar to Move {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationPasteElementName">
+            <summary>
+              Looks up a localized string similar to Paste {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationPasteElementsName">
+            <summary>
+              Looks up a localized string similar to Paste {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationRenameLayout">
+            <summary>
+              Looks up a localized string similar to Rename Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationRotateElements">
+            <summary>
+              Looks up a localized string similar to Rotate Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Operations_ElementCategory">
+            <summary>
+              Looks up a localized string similar to Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Operations_LayoutCategory">
+            <summary>
+              Looks up a localized string similar to Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationScaleElementName">
+            <summary>
+              Looks up a localized string similar to Scale {0} .
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationScaleElementsName">
+            <summary>
+              Looks up a localized string similar to Scale {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationSetElementZOrderName">
+            <summary>
+              Looks up a localized string similar to Reorder {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationTempResize">
+            <summary>
+              Looks up a localized string similar to Resize temporary groups.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationUngroupElementName">
+            <summary>
+              Looks up a localized string similar to Ungroup {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationUngroupElementsName">
+            <summary>
+              Looks up a localized string similar to Ungroup {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationUpdateAnchor">
+            <summary>
+              Looks up a localized string similar to Update anchor for {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationUpdateElementName">
+            <summary>
+              Looks up a localized string similar to Update {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.OperationUpdateElementsName">
+            <summary>
+              Looks up a localized string similar to Update {0} Elements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PageDescription">
+            <summary>
+              Looks up a localized string similar to {0}{1} x {2}{3}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA0">
+            <summary>
+              Looks up a localized string similar to A0|841 mm × 1189 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA1">
+            <summary>
+              Looks up a localized string similar to A1|594 mm  × 841 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA2">
+            <summary>
+              Looks up a localized string similar to A2|420 mm × 594 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA3">
+            <summary>
+              Looks up a localized string similar to A3|297 mm × 420 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA4">
+            <summary>
+              Looks up a localized string similar to A4|210 mm × 297 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperA5">
+            <summary>
+              Looks up a localized string similar to A5|148 mm × 210 mm.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperAnsiC">
+            <summary>
+              Looks up a localized string similar to ANSI C|17&quot; × 22&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperAnsiD">
+            <summary>
+              Looks up a localized string similar to ANSI D|22&quot; × 34&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperAnsiE">
+            <summary>
+              Looks up a localized string similar to ANSI E|34&quot; × 44&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperArchA">
+            <summary>
+              Looks up a localized string similar to Architectural A|9&quot; × 12&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperArchB">
+            <summary>
+              Looks up a localized string similar to Architectural B|12&quot; × 18&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperArchC">
+            <summary>
+              Looks up a localized string similar to Architectural C|18&quot; × 24&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperArchD">
+            <summary>
+              Looks up a localized string similar to Architectural D|24&quot; × 36&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperArchE">
+            <summary>
+              Looks up a localized string similar to Architectural E|36&quot; × 48&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperCustom">
+            <summary>
+              Looks up a localized string similar to Custom.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperCustomDescription">
+            <summary>
+              Looks up a localized string similar to Use a custom size.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperLegal">
+            <summary>
+              Looks up a localized string similar to Legal|8.5&quot; × 14&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperLetter">
+            <summary>
+              Looks up a localized string similar to Letter|8.5&quot; × 11&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperMoreSizes">
+            <summary>
+              Looks up a localized string similar to ────────────────────────────|More paper sizes....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PaperTabloid">
+            <summary>
+              Looks up a localized string similar to Tabloid|11&quot; × 17&quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Points">
+            <summary>
+              Looks up a localized string similar to points.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.PopulatingPrinterProperties">
+            <summary>
+              Looks up a localized string similar to Populating printer properties....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Portrait">
+            <summary>
+              Looks up a localized string similar to Portrait.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectCaption">
+            <summary>
+              Looks up a localized string similar to Add layout..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectErrorOnImportLayoutFMT">
+            <summary>
+              Looks up a localized string similar to Failed to import layout into project; {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectErrorOnRemoveLayoutFMT">
+            <summary>
+              Looks up a localized string similar to Failed to remove laout; {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectItemLayoutCat">
+            <summary>
+              Looks up a localized string similar to Layouts.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectItemLayoutDesc">
+            <summary>
+              Looks up a localized string similar to Layout definition.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectRemoveLayoutCaption">
+            <summary>
+              Looks up a localized string similar to Remove Layout.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ProjectRemoveLayoutConf">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to remove this layout?.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.RadiusLabel">
+            <summary>
+              Looks up a localized string similar to Enter radius:.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ReadoutSelectionCountFormat">
+            <summary>
+              Looks up a localized string similar to Selected Elements: {0}.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Recent">
+            <summary>
+              Looks up a localized string similar to Recent.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.RequiresNumericInput">
+            <summary>
+              Looks up a localized string similar to Please enter a number..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.RequiresPositiveNumericInput">
+            <summary>
+              Looks up a localized string similar to Please enter a positive number..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.ScaleBar">
+            <summary>
+              Looks up a localized string similar to Scale Bar.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.SelectFromPrinter">
+            <summary>
+              Looks up a localized string similar to Select Page from Printer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.SelectFromPrinterDescription">
+            <summary>
+              Looks up a localized string similar to Copy page size from a printer.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.SymbolInches">
+            <summary>
+              Looks up a localized string similar to &quot;.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.TestPageDescription">
+            <summary>
+              Looks up a localized string similar to Test Page Description..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.TestPageID">
+            <summary>
+              Looks up a localized string similar to Test Page ID..
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Unloading">
+            <summary>
+              Looks up a localized string similar to Unloading....
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.UpdateElementProperties">
+            <summary>
+              Looks up a localized string similar to Updating element properties.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Layouts.Properties.Resources.Warning">
+            <summary>
+              Looks up a localized string similar to Warning.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.PositiveNumberRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validation rule for "Height" and "Width" text boxes.
+            </summary>    
+        </member>
+        <member name="T:ArcGIS.Desktop.Layouts.PropertyPages.PageSetupPage">
+            <summary>
+            Interaction logic for PageSetupPage.xaml
+            </summary>
+            <summary>
+            PageSetupPage
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Layouts.PropertyPages.PageSetupPage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
