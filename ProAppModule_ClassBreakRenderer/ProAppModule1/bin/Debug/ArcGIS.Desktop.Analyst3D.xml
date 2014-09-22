@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.Analyst3D</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.AspectSurfaceSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Triangulate a surface using aspect measurements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.AspectSymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Aspect.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ClassificationPointsSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Draw points using classification codes.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ClassificationSymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Classification.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ElevationPointsSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Draw points using elevation measurements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ElevationSurfaceSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Triangulate a surface using elevation measurements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.ElevationSymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Elevation.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.GroupPointsSymbol">
+            <summary>
+              Looks up a localized string similar to Symbolize your layer using points.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.GroupSurfaceSymbol">
+            <summary>
+              Looks up a localized string similar to Symbolize your layer using surface.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.IntensityPointsSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Draw points using intensity measurements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.IntensitySymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Intensity.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.SimpleSymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Simple.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.SlopeSurfaceSymbolizerDescription">
+            <summary>
+              Looks up a localized string similar to Triangulate a surface using slope measurements.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.LocalResources.SurfaceLayerRendererRes.SlopeSymbolizerHeading">
+            <summary>
+              Looks up a localized string similar to Slope.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.Symbology.SurfaceLayerSymbolizerViewModelBase.ShowLoadingMessage">
+            <summary>
+            Shows 'Loading' message and sets the visibility of the controls 
+            in the unique value symbolizer dock pane to the inverse of the 
+            specified value.
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Analyst3D.Symbology.SurfaceLayerSymbologyView">
+            <summary>
+            Interaction logic for SurfaceLayerSymbologyView.xaml
+            </summary>
+            <summary>
+            SurfaceLayerSymbologyView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Analyst3D.Symbology.SurfaceLayerSymbologyView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Analyst3D.ServiceErrorCodes.E_ABORT">
+            <summary>
+            Indicates that cancelation was acknowledged by the service method.
+            This error code should be translated to an OperationCanceledException.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Analyst3D.ServiceErrorCodes.E_FAIL">
+            <summary>
+            Indicates a critical failure that should not be handled.
+            Application should terminate in response to this error.
+            </summary>
+        </member>
+        <member name="F:ArcGIS.Desktop.Analyst3D.ServiceErrorCodes.E_GENERAL_FAILURE">
+            <summary>
+            Indicates a general failure that can safely be ignored.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ArcGIS.Desktop.Analyst3D.ServiceErrorCodes.E_EDITOR_INVALID_INPUT" -->
+        <!-- Badly formed XML comment ignored for member "F:ArcGIS.Desktop.Analyst3D.ServiceErrorCodes.E_EDITOR_INVALID_GEOMETRY_TYPE" -->
+        <member name="T:ArcGIS.Desktop.Analyst3D.LineOfSight.LineOfSightSettingsView">
+            <summary>
+            Interaction logic for LineOfSightSettingsView.xaml
+            </summary>
+            <summary>
+            LineOfSightSettingsView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Analyst3D.LineOfSight.LineOfSightSettingsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Analyst3D.LineOfSight.LineOfSightGraphView">
+            <summary>
+            Interaction logic for LineOfSightGraphView.xaml
+            </summary>
+            <summary>
+            LineOfSightGraphView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Analyst3D.LineOfSight.LineOfSightGraphView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Analyst3D.ProfileGraph.ProfileGraphView">
+            <summary>
+            Interaction logic for ProfileGraphView.xaml
+            </summary>
+            <summary>
+            ProfileGraphView
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Analyst3D.ProfileGraph.ProfileGraphView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Analyst3D.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Analyst3D.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

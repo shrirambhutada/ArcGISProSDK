@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArcGIS.Desktop.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:ArcGIS.Desktop.Extensions.Controls.BurgerButton">
+            <summary>
+            Interaction logic for Burger.xaml
+            </summary>
+            <summary>
+            BurgerButton
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Extensions.Controls.BurgerButton.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Extensions.CoreExtensions">
+            <summary>
+            Extends Core.Data
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Extensions.DesktopExtensionsModule">
+            <summary>
+            Extensions to ArcGIS Pro
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Extensions.DesktopExtensionsModule.ModuleID">
+            <summary>
+            The Framework ID associated with this module
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Extensions.DesktopExtensionsModule.Current">
+            <summary>
+            Gets the Framework module instance for this module
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Extensions.LocalResources.DesktopExtensionsRes">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Extensions.LocalResources.DesktopExtensionsRes.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Extensions.LocalResources.DesktopExtensionsRes.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ArcGIS.Desktop.Extensions.LocalResources.DesktopExtensionsRes.LoadingModuleError">
+            <summary>
+              Looks up a localized string similar to Unable to load DesktopExtensions module..
+            </summary>
+        </member>
+        <member name="T:ArcGIS.Desktop.Mapping.MappingExtensions">
+            <summary>
+            Extension methods for Mapping objects.
+            </summary>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.GetTableAsync(ArcGIS.Desktop.Mapping.MapMember)">
+            <summary>
+            Retrieves a Table associated with the map member (layer or standalone table).
+            </summary>
+            <param name="mapMember"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.GetTemplateAsync(ArcGIS.Desktop.Mapping.Layer,System.String)">
+            <summary>
+            Retrieves a template by name for a layer.
+            </summary>
+            <param name="layer"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.IsFabricLayer(ArcGIS.Desktop.Mapping.Layer)">
+            <summary>
+            Checks whether the layer participates in a Parcel Fabric.
+            </summary>
+            <param name="layer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.TestQueryAsync(ArcGIS.Desktop.Mapping.SelectionSet,System.String)">
+            <summary>
+            Returns the subset of the selection that satisfies the given query.
+            </summary>
+            <param name="selection"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.GetSelectionSetAsync(ArcGIS.Desktop.Mapping.Map)">
+            <summary>
+            Get a selection set associated with the map
+            </summary>
+            <param name="map"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArcGIS.Desktop.Mapping.MappingExtensions.FlattenLayers(System.Collections.Generic.IEnumerable{ArcGIS.Desktop.Mapping.Layer})">
+            <summary>
+            Returns an enumeration of layers. Removes group layers and recurses their sublayers
+            to add them to the list
+            </summary>
+            <param name="layers"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
